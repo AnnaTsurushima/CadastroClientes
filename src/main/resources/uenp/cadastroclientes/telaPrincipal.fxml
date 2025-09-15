@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="898.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uenp.cadastroclientes.telaPrincipalController">
+   <children>
+      <TextField fx:id="nome" layoutX="309.0" layoutY="133.0" />
+      <TextField fx:id="cep" layoutX="309.0" layoutY="191.0" promptText="99999-999" />
+      <TextField fx:id="rua" layoutX="309.0" layoutY="247.0" />
+      <TextField fx:id="cidade" layoutX="309.0" layoutY="300.0" />
+      <TextField fx:id="telefone" layoutX="309.0" layoutY="362.0" />
+      <TextField fx:id="numero" layoutX="309.0" layoutY="415.0" />
+      <TextField fx:id="estado" layoutX="309.0" layoutY="485.0" />
+      <Button layoutX="522.0" layoutY="531.0" mnemonicParsing="false" onAction="#gravar" text="Gravar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="179.0" layoutY="531.0" mnemonicParsing="false" onAction="#limpar" text="Limpar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="483.0" layoutY="191.0" mnemonicParsing="false" onAction="#buscar" prefHeight="25.0" prefWidth="64.0" text="Buscar" />
+      <Text layoutX="253.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+      <Text layoutX="253.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP" />
+      <Text layoutX="253.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua" />
+      <Text layoutX="253.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade" />
+      <Text layoutX="253.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" />
+      <Text layoutX="253.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número" />
+      <Text layoutX="253.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+      <Text layoutX="309.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Clientes" wrappingWidth="226.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelaClientes" layoutX="9.0" layoutY="614.0" prefHeight="268.0" prefWidth="791.0">
+        <columns>
+          <TableColumn fx:id="colunaCodigo" prefWidth="56.0" text="Código" />
+          <TableColumn fx:id="colunaNome" prefWidth="291.0" text="Nome" />
+            <TableColumn fx:id="colunaCidade" minWidth="0.0" prefWidth="184.0" text="Cidade" />
+            <TableColumn fx:id="colunaEstado" prefWidth="83.0" text="Estado" />
+            <TableColumn fx:id="colunaTelefone" prefWidth="176.0" text="Telefone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
